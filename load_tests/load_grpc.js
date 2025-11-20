@@ -1,6 +1,6 @@
-import {check} from 'k6';
+import { check } from 'k6';
 import grpc from 'k6/experimental/grpc';
-import {Trend} from 'k6/metrics';
+import { Trend } from 'k6/metrics';
 
 const host = __ENV.HOST || '127.0.0.1:3000';
 

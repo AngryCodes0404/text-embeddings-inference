@@ -1,6 +1,6 @@
-import {check} from 'k6';
+import { check } from 'k6';
 import http from 'k6/http';
-import {Trend} from 'k6/metrics';
+import { Trend } from 'k6/metrics';
 
 const host = __ENV.HOST || '127.0.0.1:3000';
 
@@ -42,7 +42,7 @@ export default function () {
         truncate: true,
     });
 
-    const headers = {'Content-Type': 'application/json'};
+    const headers = { 'Content-Type': 'application/json' };
     const res = http.post(`http://${host}/`, payload, {
         headers, timeout: '20m'
     });
